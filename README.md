@@ -32,5 +32,9 @@ This project helped me learn a lot. I didn’t just practice Python; I learned h
 
 #Bar plot for sentiment analysis of news headlines
 
-![Image](https://github.com/user-attachments/assets/16d5c7b9-6889-4ac9-8224-5f79687eb86c)
+![Image](https://github.com/user-attachments/assets/16d5c7b9-6889-4ac9-8224-5f79687eb86c) 
+
+#Line plot for keyword trend over last 10 days
+
+![Image](https://github.com/user-attachments/assets/e0b2d7c3-e34d-478d-8c2f-63e1daa75ec0)
 
