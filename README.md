@@ -30,4 +30,7 @@ This project helped me learn a lot. I didn’t just practice Python; I learned h
 
 ![Image](https://github.com/user-attachments/assets/cd7e424f-cf36-4171-9680-a1f217bdbe6d)
 
+#Bar plot for sentiment analysis of news headlines
+
+![Image](https://github.com/user-attachments/assets/16d5c7b9-6889-4ac9-8224-5f79687eb86c)
 
