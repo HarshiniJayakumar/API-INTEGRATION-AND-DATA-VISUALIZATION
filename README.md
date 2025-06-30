@@ -25,3 +25,7 @@ This project helped me learn a lot. I didn’t just practice Python; I learned h
 #OUTPUT
 
 ![Image](https://github.com/user-attachments/assets/3bbb5ade-d8f8-47b4-9ddf-ac4823f7ee13)
+
+#Bar plot for news from source
+
+
