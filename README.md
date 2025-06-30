@@ -23,3 +23,5 @@ For the visualization part, I used matplotlib and seaborn.Because these are the 
 This project helped me learn a lot. I didn’t just practice Python; I learned how to work with real data from the internet, clean it, and show it in a way that people can understand easily. There were a few errors in the beginning, but fixing them helped me get better at problem-solving. Overall, In this task i learned about lot of libraries and how to connect with api, and I now feel more confident with APIs, data analysis, and visualizing results.
 
 #OUTPUT
+
+![Image](https://github.com/user-attachments/assets/3bbb5ade-d8f8-47b4-9ddf-ac4823f7ee13)
