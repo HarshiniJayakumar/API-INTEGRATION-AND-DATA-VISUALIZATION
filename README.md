@@ -28,4 +28,6 @@ This project helped me learn a lot. I didn’t just practice Python; I learned h
 
 #Bar plot for news from source
 
+![Image](https://github.com/user-attachments/assets/cd7e424f-cf36-4171-9680-a1f217bdbe6d)
+
 
