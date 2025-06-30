@@ -36,5 +36,9 @@ This project helped me learn a lot. I didn’t just practice Python; I learned h
 
 #Line plot for keyword trend over last 10 days
 
-![Image](https://github.com/user-attachments/assets/e0b2d7c3-e34d-478d-8c2f-63e1daa75ec0)
+![Image](https://github.com/user-attachments/assets/e0b2d7c3-e34d-478d-8c2f-63e1daa75ec0) 
+
+#Pie chart for overall sentiment analysis
+
+![Image](https://github.com/user-attachments/assets/6ac6fb27-68de-417f-817a-bbe4e079994f)
 
