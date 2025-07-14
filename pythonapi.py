@@ -65,15 +65,6 @@ for article in articles:
     sources.append(sourceandname)
 source_count = collections.Counter(sources)
 
-#Bar plot of source count
-plt.figure(figsize=(10, 4))
-x=list(source_count.values())
-y=list(source_count.keys())
-sns.barplot(x=x, y=y,legend=False)
-plt.title("Reports  from source")
-plt.xlabel("Count")
-plt.ylabel("Source Name")
-plt.show()
 
 #Sentiment Analysis
 df = pd.DataFrame(articles)
@@ -91,14 +82,6 @@ def sentimenttype(polarity):
 df['type_of_sentiment'] = df['sentiment'].apply(sentimenttype)
 sentiment_counts = df['type_of_sentiment'].value_counts()
 
-#Bar Plot of Sentiment analysis of News Headlines
-plt.figure(figsize=(10, 4))
-sns.barplot(x=sentiment_counts.index, y=sentiment_counts.values)
-plt.title("Sentiment Analysis of News Headlines")
-plt.xlabel("Sentiment")
-plt.ylabel("Number of Articles")
-plt.tight_layout()
-plt.show()
 
 print("\n Keyword trend over last 10 days")
 start_date = datetime.now() - timedelta(days=10)
@@ -122,26 +105,41 @@ df_trend['title'] = df_trend['title'].fillna('')
 df_trend['sentiment'] = df_trend['title'].apply(lambda x: TextBlob(x).sentiment.polarity)
 df_trend['type_of_sentiment'] = df_trend['sentiment'].apply(sentimenttype)
 
-#Line plot of keyword trend over last 10 days
 daily_counts = df_trend.groupby('day').size().reset_index(name='count')
-plt.figure(figsize=(10, 5))
-sns.lineplot(data=daily_counts,x='day', y='count',marker='o')
-plt.title(f"Keyword: '{keyword}' trend over Last 10 Days")
-plt.xlabel("Date")
-plt.ylabel("Mentions")
-plt.xticks(rotation=45)
-plt.grid(True)
+overall_sentiment_analysis = df_trend['type_of_sentiment'].value_counts()
+
+fig,axs=plt.subplots(2,2,figsize=(16,10))
+
+#Bar plot of source count
+x=list(source_count.values())
+y=list(source_count.keys())
+sns.barplot(x=x, y=y,ax=axs[0,0],legend=False)
+axs[0,0].set_title("Reports  from source")
+axs[0,0].set_xlabel("Count")
+axs[0,0].set_ylabel("Source Name")
+
+#Bar Plot of Sentiment analysis of News Headlines
+sns.barplot(x=sentiment_counts.index, y=sentiment_counts.values,ax=axs[0,1])
+axs[0,1].set_title("Sentiment Analysis of News Headlines")
+axs[0,1].set_xlabel("Sentiment")
+axs[0,1].set_ylabel("Number of Articles")
+
+#Line plot of keyword trend over last 10 days
+axs[1,0].plot(daily_counts['day'],daily_counts['count'],marker='o',color='purple')
+axs[1,0].set_title(f"Keyword: '{keyword}' trend over Last 10 Days")
+axs[1,0].set_xlabel("Date")
+axs[1,0].set_ylabel("Mentions")
+axs[1,0].tick_params(axis='x',rotation=45)
+axs[1,0].grid(True)
+
+#Pie chart for overall sentiment
+axs[1,1].pie(overall_sentiment_analysis.values,labels=overall_sentiment_analysis.index,autopct='%1.1f%%', startangle=90, colors=['lightgreen', 'lightcoral', 'lightgray'])
+axs[1,1].set_title(f"Overall Sentiment analysis for '{keyword}'")
+axs[1,1].axis('equal')
+
 plt.tight_layout()
 plt.show()
 
-#Pie chart for overall sentiment
-overall_sentiment_analysis = df_trend['type_of_sentiment'].value_counts()
-plt.figure(figsize=(6, 6))
-overall_sentiment_analysis.plot.pie(autopct='%1.1f%%', startangle=90, colors=['lightgreen', 'lightcoral', 'lightgray'])
-plt.title(f"Overall Sentiment analysis for '{keyword}'")
-plt.ylabel('')
-plt.tight_layout()
-plt.show()
 
 
 
