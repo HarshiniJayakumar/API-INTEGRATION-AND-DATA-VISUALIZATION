@@ -26,19 +26,7 @@ This project helped me learn a lot. I didn’t just practice Python; I learned h
 
 <img width="1893" height="559" alt="Image" src="https://github.com/user-attachments/assets/8ec7c182-9c5e-4ce9-95cb-d7e7a496e75b" />
 
-#Bar plot for news from source
+#Visualization dashboard
 
-![Image](https://github.com/user-attachments/assets/cd7e424f-cf36-4171-9680-a1f217bdbe6d)
-
-#Bar plot for sentiment analysis of news headlines
-
-![Image](https://github.com/user-attachments/assets/16d5c7b9-6889-4ac9-8224-5f79687eb86c) 
-
-#Line plot for keyword trend over last 10 days
-
-![Image](https://github.com/user-attachments/assets/e0b2d7c3-e34d-478d-8c2f-63e1daa75ec0) 
-
-#Pie chart for overall sentiment analysis
-
-![Image](https://github.com/user-attachments/assets/6ac6fb27-68de-417f-817a-bbe4e079994f)
+<img width="1914" height="997" alt="Image" src="https://github.com/user-attachments/assets/0b64dec3-eb40-44b8-aa60-0d186be31573" />
 
